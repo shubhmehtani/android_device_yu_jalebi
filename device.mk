@@ -14,13 +14,36 @@
 # limitations under the License.
 #
 
-# Inherit from msm8916-common
-$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 #    $(LOCAL_PATH)/overlay-lineage
+
+# IMS
+PRODUCT_PACKAGES += \
+    libshim_boringssl \
+    libshims_ims
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.lte.volte_call_capable=true \
+    persist.ims.enableADBLogs=1 \
+    persist.ims.enableDebugLogs=1 \
+    persist.radio.calls.on.ims=true \
+    persist.radio.csvt.enabled=false \
+    persist.radio.jbims=1 \
+    persist.radio.ROTATION_ENABLE=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.radio.VT_USE_MDM_TIME=0 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.volte_enalbed_by_hw=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.data.iwlan.enable=true
+	
+# Inherit the rest from msm8916-common
+$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
 
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
