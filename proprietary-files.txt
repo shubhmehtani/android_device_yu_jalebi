@@ -136,8 +136,8 @@ etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 
 # Media
-lib/libOmxVdecHevc.so
-vendor/lib/libHevcSwDecoder.so
+lib/libOmxVdecHevc.so|ec53293c9dd8f6be731b4485c9b4c7f0aca9b542
+vendor/lib/libHevcSwDecoder.so|0972a49766ea1b4f9f3e734c1e3a6aa27910cc09
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
 vendor/lib/libmm-color-convertor.so
