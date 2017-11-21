@@ -5,4 +5,4 @@ TARGET_KERNEL_CONFIG := lineageos_jalebi_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-BOARD_KERNEL_IMAGE_NAME :=  Image
+BOARD_KERNEL_IMAGE_NAME := zImage
